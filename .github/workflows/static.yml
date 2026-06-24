@@ -36,7 +36,7 @@ jobs:
       - name: install dependencies
         run: npm install
       - name: set user
-        run: whoami
+        run: sudo chown -R runner ./node_modules
       - name: Build app
         run: npm run build
       - name: Setup Pages
