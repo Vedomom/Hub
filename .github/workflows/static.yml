@@ -35,6 +35,10 @@ jobs:
         uses: actions/setup-node@v6
       - name: install dependencies
         run: npm install
+      - name: set user
+        run: npm config set user 0
+      - name: set permissions
+        run: npm config set unsafe-perm true
       - name: Build app
         run: npm run build
       - name: Setup Pages
