@@ -36,7 +36,7 @@ jobs:
       - name: install dependencies
         run: npm install
       - name: set user
-        run: sudo chown -R me ./node_modules
+        run: sudo chown -R Vedomom ./node_modules
       - name: Build app
         run: npm run build
       - name: Setup Pages
