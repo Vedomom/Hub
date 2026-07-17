@@ -8,41 +8,76 @@
         <meta name="description" content="a place to view my projects">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     </head>
     <body>
-        <div class="canvas">
-            <canvas id="bg"></canvas>
-        </div>
 
-        <ul>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-            <li>4</li>
-            <li>5</li>
-            <li>6</li>
+        <nav>
+            <a href="#" class="logo"><span>Momo's Hub</span></a>
+
+            <ul class="links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+                <a href="#art">Art</a>
+                <a href="#contact">Contact</a>
+            </ul>
+
+            <i class='bx bx-menu' id="menu"></i>
+
+            <a href="#contact" class="btn">Contact Me</a>
+        </nav>
+
+
+
+
+        <section id="home">
+            <canvas id="tjsContainer"></canvas>
+        </section>
+        
+        <section id="about">
+            <img src="resources\slime pfp.png" alt="">
+            <div class="info-box">
+                <h1><span>Hi,I'm Momo</span></h1>
+                <h3><span>Programmer</span> & <span>Artist</span></h3>
+                <p>lorem ipsum dolor sit</p>
+            </div>
+
+            <div class="btn">Contact Me!</div>
+
+
+            <h2><span>Skills</span></h2>
             
-        </ul>
+            <div class="skill-box">
+                
+                <div class="skills">
+                    <ul>
+                        <li>
+                            <span><i class='bx bx-right-arrow'></i>Skill 1</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-right-arrow'></i>Skill 2</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-right-arrow'></i>Skill 3</span>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <span><i class='bx bx-right-arrow'></i>Skill 4</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-right-arrow'></i>Skill 5</span>
+                        </li>
+                        <li>
+                            <span><i class='bx bx-right-arrow'></i>Skill 6</span>
+                        </li>
+                    </ul>
+                </div>
+                <img src="resources\OL_12.B.gif">
+            </div>
+        </section>
+
         
         
         <script type="module" src="main.js"></script>
