@@ -4,6 +4,27 @@ import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { array } from 'three/tsl';
 
+//regular shinanigans
+
+const menu = document.querySelector("#menu");
+const links = document.querySelector(".links");
+
+menu.onclick = () => {
+    menu.classList.toggle('bx-x');
+    links.classList.toggle('active')
+}
+links.onclick = () => {
+    menu.classList.toggle('bx-x');
+    links.classList.toggle('active')
+}
+
+
+
+
+
+
+
+//Three.js
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera(80, document.body.clientWidth/window.innerHeight, 0.1, 1000);
 
@@ -55,6 +76,9 @@ function animate() {
     icos.rotation.y += 0.001;
     icos.rotation.z += 0.002;
 
+    camera.aspect = Math.max(document.body.clientWidth, 1)/Math.max(window.innerHeight, 1)
+    camera.updateProjectionMatrix()
+    renderer.setPixelRatio(window.devicePixelRatio)
     renderer.setSize(document.body.clientWidth, window.innerHeight);
     controls.update()
     renderer.render(scene, camera);
