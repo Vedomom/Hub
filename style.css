@@ -1,17 +1,21 @@
 :root{
     --BG: #171614;
-    --SBG:  #a180da;
+    --SBG: darkturquoise;
     --MainColor: #F4A6BD;
+    --teritaryColor: dodgerblue ;
 }
 
 *{
+    
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: "Akaya Kanadaka", system-ui;
+    font-weight: 400;
+    font-style: normal;
     scrollbar-width: thin;
     scrollbar-color: var(--SBG) var(--BG);
 }
@@ -46,6 +50,23 @@ nav ul a{
     color: mintcream;
     opacity: 0.7;
     transition: 0.2s ease-in-out;
+    position: relative;
+}
+
+nav ul a::before{
+    position: absolute;
+    content: '';
+    width: 0;
+    left: 0;
+    top: 30px;
+    height: 6px;
+    border-radius: 1em;
+    transition: 0.2s ease-in-out;
+    background: linear-gradient(to right, var(--MainColor), var(--teritaryColor));
+}
+
+nav ul a:hover::before{
+    width: 100%;
 }
 
 nav ul a:hover{
@@ -57,11 +78,12 @@ nav ul a:hover{
     color: mintcream;
     font-weight: 800;
     opacity: 0.8;
-    transition: 0.2s ease-in-out;
+    transition: 0.4s ease-in-out;
 }
 
 .logo:hover{
     opacity: 1;
+    transform: scale(1.03);
 }
 
 .btn{
@@ -69,16 +91,34 @@ nav ul a:hover{
     color: mintcream;
     font-weight: 500;
     letter-spacing: 1px;
-    border-radius: 0.5em;
+    border-radius: 2em;
     font-size: 1.2em;
-    border: 2px solid var(--MainColor);
     cursor: pointer;
+    border: 2px solid var(--MainColor);
+    background: var(--BG);
     transition: 0.3s ease-in-out;
 }
 
 .btn:hover{
     background-color: var(--MainColor);
     color: var(--BG);
+    transform: scale(1.05);
+}
+
+.visit-btn{
+    padding: 0.5em 1em;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 2em;
+    font-size: 1.3em;
+    cursor: pointer;
+    background: linear-gradient(to right, var(--MainColor), var(--SBG));
+    color: var(--BG);
+    transition: 0.3s ease-in-out;
+}
+
+.visit-btn:hover{
+    transform: scale(1.05);
 }
 
 span{
@@ -159,6 +199,7 @@ section{
     border-radius: 1em;
 }
 #about h2{
+    margin-top: 3em;
     font-size: 3vw;
     font-weight: 500;
     align-self: self-start;
@@ -233,6 +274,13 @@ section{
 .work-box:hover{
     border-color: var(--MainColor);
     padding: 3.5em;
+    background: var(--SBG);
+    color: var(--BG);
+}
+.work-box:hover span{
+    background: var(--BG);
+    background-clip: text;
+    color: transparent;
 }
 .work-box p{
     opacity: 0.8;
@@ -243,6 +291,11 @@ section{
 .work-box img{
     min-width: 25px;
     border-radius: 0.5em;
+}
+.work-box .btn{
+    text-align: center;
+    align-self: center;
+    font-size: 1.2em;
 }
 
 #contact{
@@ -275,6 +328,10 @@ form input{
 }
 form input:focus{
     background-color: antiquewhite;
+}
+
+#contact .btn{
+    font-size: 1.5em;
 }
 
 footer{
@@ -330,6 +387,7 @@ footer{
 }
 .social-icons span:hover{
     color: mintcream;
+    transform: scale(1.5);
 }
 
 @media(max-width: 968px){
