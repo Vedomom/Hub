@@ -32,7 +32,7 @@ imageIndexs.forEach((i) => {
         image.src = `art/art_gal_img_${i}.png`;
     }
     else{
-            image.src = `${import.meta.env.BASE_URL}/art/art_gal_img_${i}.png`;
+            image.src = `${import.meta.env.BASE_URL}/assets/art_gal_img_${i}.png`;
     };
     image.alt = `Art Cover #${i}`;
     image.classList.add('galleryImage');
