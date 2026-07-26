@@ -28,12 +28,9 @@ console.log(imageIndexs)
 
 imageIndexs.forEach((i) => {
     const image = document.createElement('img');
-    if(import.meta.env.BASE_URL == '/'){
-        image.src = `art/art_gal_img_${i}.png`;
-    }
-    else{
-            image.src = `${import.meta.env.BASE_URL}/assets/art_gal_img_${i}.png`;
-    };
+
+    image.src = `/art_gal_img_${i}.png`;
+  
     image.alt = `Art Cover #${i}`;
     image.classList.add('galleryImage');
 
