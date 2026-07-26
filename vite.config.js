@@ -7,7 +7,8 @@ export default defineConfig({
     base: process.env.NODE_ENV === 'production' ? '/Hub' : '',
     build: {
         outDir: 'dist',
-        publicDir: 'art'
+        copyPublicDir: true
     },
+    publicDir: 'art',
     
 }) 
