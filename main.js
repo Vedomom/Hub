@@ -32,7 +32,7 @@ function getImageUrl(name) {
 imageIndexs.forEach((i) => {
     const image = document.createElement('img');
 
-    image.src = getImageUrl(`/art_gal_img_${i}`);
+    image.src = getImageUrl(`art/art_gal_img_${i}`);
   
     image.alt = `Art Cover #${i}`;
     image.classList.add('galleryImage');
