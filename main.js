@@ -24,12 +24,15 @@ const gallery = document.querySelector('#gallery');
 const selectedImage = document.querySelector('#selectedImage');
 const popUp = document.querySelector('.PopUpContainer')
 const imageIndexs = Array(40).keys();
-console.log(imageIndexs)
+
+function getImageUrl(name) {
+  return new URL(`${name}.png`, import.meta.url).href
+}
 
 imageIndexs.forEach((i) => {
     const image = document.createElement('img');
 
-    image.src = `/art_gal_img_${i}.png`;
+    image.src = getImageUrl(`/art_gal_img_${i}`);
   
     image.alt = `Art Cover #${i}`;
     image.classList.add('galleryImage');
