@@ -3,5 +3,6 @@
 */
 
 export default {
-    base: process.env.NODE_ENV === 'production' ? '/Hub' : ''
+    base: process.env.NODE_ENV === 'production' ? '/Hub' : '',
+    publicDir: 'art'
 }
