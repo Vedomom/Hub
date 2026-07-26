@@ -28,7 +28,7 @@ const imageIndexs = Array(40).keys();
 imageIndexs.forEach((i) => {
     const image = document.createElement('img');
 
-    image.src = `/art_gal_img_${i}.png`;
+    image.src = `./art_gal_img_${i}.png`;
   
     image.alt = `Art Cover #${i}`;
     image.classList.add('galleryImage');
