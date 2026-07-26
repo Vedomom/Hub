@@ -30,7 +30,7 @@ console.log(imageIndexs)
 
 imageIndexs.forEach((i) => {
     const image = document.createElement('img');
-    image.src = `art/art_gal_img_${i}.png`;
+    image.src = `${import.meta.env.BASE_URL}/art/art_gal_img_${i}.png`;
     image.alt = `Art Cover #${i}`;
     image.classList.add('galleryImage');
 
