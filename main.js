@@ -2,8 +2,6 @@ import { ThreeMFLoader } from 'three/examples/jsm/Addons.js';
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { array } from 'three/tsl';
-import { Item } from 'three/examples/jsm/inspector/ui/Item.js';
 
 //Menu button toggle
 
@@ -17,7 +15,7 @@ menu.onclick = () => {
 links.onclick = () => {
     menu.classList.toggle('bx-x');
     links.classList.toggle('active')
-}
+}   
 
 
 //Art Gallery
@@ -30,7 +28,12 @@ console.log(imageIndexs)
 
 imageIndexs.forEach((i) => {
     const image = document.createElement('img');
-    image.src = `${import.meta.env.BASE_URL}/art/art_gal_img_${i}.png`;
+    if(import.meta.env.BASE_URL == '/'){
+        image.src = `art/art_gal_img_${i}.png`;
+    }
+    else{
+            image.src = `${import.meta.env.BASE_URL}/art/art_gal_img_${i}.png`;
+    };
     image.alt = `Art Cover #${i}`;
     image.classList.add('galleryImage');
 
