@@ -3,8 +3,9 @@ import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
 import { array } from 'three/tsl';
+import { Item } from 'three/examples/jsm/inspector/ui/Item.js';
 
-//regular shinanigans
+//Menu button toggle
 
 const menu = document.querySelector("#menu");
 const links = document.querySelector(".links");
@@ -19,7 +20,36 @@ links.onclick = () => {
 }
 
 
+//Art Gallery
 
+const gallery = document.querySelector('#gallery');
+const selectedImage = document.querySelector('#selectedImage');
+const popUp = document.querySelector('.PopUpContainer')
+const imageIndexs = Array(40).keys();
+console.log(imageIndexs)
+
+imageIndexs.forEach((i) => {
+    const image = document.createElement('img');
+    image.src = `/art/art_gal_img_${i}.png`;
+    image.alt = `Art Cover #${i}`;
+    image.classList.add('galleryImage');
+
+    image.addEventListener('click', () =>{
+        //popUp
+        popUp.classList.toggle('active')
+        selectedImage.src = image.src
+        selectedImage.alt = image.alt
+    })
+
+    gallery.appendChild(image)
+
+})
+
+popUp.onclick = () => {
+    popUp.classList.toggle('active')
+    selectedImage.src = ''
+    selectedImage.alt = ''
+}
 
 
 

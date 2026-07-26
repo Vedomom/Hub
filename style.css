@@ -128,7 +128,7 @@ span{
 }
 
 #menu{
-    columns: mintcream;
+    color: mintcream;
     font-size: 3em;
     display: none;
 }
@@ -298,6 +298,63 @@ section{
     font-size: 1.2em;
 }
 
+#art{
+    background-color: var(--BG);
+    text-align: center;
+}
+
+#art h1 {
+    font-size: 5em;
+}
+
+#gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25em, 1fr));
+    gap: 0.8em;
+    margin-top: 3em;
+    grid-auto-flow: dense;
+    justify-content: space-between;
+
+}
+.galleryImage{
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: cover;
+    cursor: pointer;
+    border: 0px solid var(--SBG);
+    border-radius: 1em;
+    transition: 0.3s ease-in-out;
+
+}
+.galleryImage:hover{
+    transform: scale(1.03);
+    border-width: 0.15em;
+}
+
+#art .PopUpContainer{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(13, 13, 12, 0.806);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    padding: 0.5em 0;
+    backdrop-filter: blur(8px);
+    display: none;
+}
+#selectedImage{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+#art .PopUpContainer.active{
+    display: flex;
+}
+
 #contact{
     background-color: var(--BG);
 }
@@ -390,7 +447,12 @@ footer{
     transform: scale(1.5);
 }
 
-@media(max-width: 968px){
+footer p{
+    color: #0f0f0e;
+    font-size: 0.1em;
+}
+
+@media(max-width: 1168px){
     section{
         padding: 8em 15%;
     }
@@ -423,14 +485,19 @@ footer{
             color: mintcream;
         }
     .links.active{
-            display: block;
+            display: flex;
+            gap: 0em;
+    }
+
+    nav ul a::before{
+        top: 35spx;
     }
 
     #about h1{
-            font-size: 4vw;
+            font-size: 4em;
     }
     #about h3{
-            font-size: 2vw;
+            font-size: 2em;
     }
     #about img{
             width: 24vw;
@@ -443,26 +510,30 @@ footer{
             width: 32vw;
     }
     #about h2{
-            font-size: 2vw;
+            font-size: 2em;
     }
     #about .skill-box ul{
             font-size: 1em;
+    }
+
+    #gallery{
+        grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     }
 
 }
 
 @media(max-width:768px){
     #about h1{
-            font-size: 2.5vw;
+            font-size: 2.5em;
     }
     #about h3{
-            font-size: 1.5vw;
+            font-size: 1.5em;
     }
     #about img{
             width: 32vw;
     }
     #about h2{
-            font-size: 1.5vw;
+            font-size: 1.5em;
     }
 
     #about .skill-box{
