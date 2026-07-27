@@ -88,6 +88,45 @@ popUp.onclick = () => {
 
 
 
+//animations
+
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+const nav_abt = document.querySelector('.nav-about');
+const nav_wrk = document.querySelector('.nav-work');
+const nav_art = document.querySelector('.nav-art');
+const nav_tct = document.querySelector('.nav-contact');
+
+const abt_header = document.querySelector('.pfp');
+const wrk_header = document.querySelector('.work-header');
+const art_header = document.querySelector('.art-header');
+const tct_header = document.querySelector('.contact-header');
+
+nav_abt.addEventListener('click', async() => {
+    abt_header.classList.toggle('animate-regular');
+    await sleep(700);
+    abt_header.classList.toggle('animate-regular');
+});
+
+nav_wrk.addEventListener('click', async() => {
+    wrk_header.classList.toggle('animate-regular');
+    await sleep(700);
+    wrk_header.classList.toggle('animate-regular');
+});
+
+nav_art.addEventListener('click', async() => {
+    art_header.classList.toggle('animate-regular');
+    await sleep(700);
+    art_header.classList.toggle('animate-regular');
+});
+
+nav_tct.addEventListener('click', async() => {
+    tct_header.classList.toggle('animate-regular');
+    await sleep(700);
+    tct_header.classList.toggle('animate-regular');
+});
 
 //Three.js
 const scene = new THREE.Scene();

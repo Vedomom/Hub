@@ -8,6 +8,7 @@
         <title>Momo's Hub</title>
         <meta name="description" content="a place to view my projects">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/x-icon" href="/resources/favicon.ico">
         <link rel="stylesheet" href="styles.css">
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         
@@ -21,10 +22,10 @@
             <a href="#home" class="logo"><span>Momo's Hub</span></a>
 
             <ul class="links">
-                <a href="#about">About</a>
-                <a href="#work">Work</a>
-                <a href="#art">Art</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" class="nav-about">About</a>
+                <a href="#work" class="nav-work">Work</a>
+                <a href="#art" class="nav-art">Art</a>
+                <a href="#contact" class="nav-contact">Contact</a>
             </ul>
 
             <i class='bx bx-menu' id="menu"></i>
@@ -40,7 +41,7 @@
         </section>
         
         <section id="about">
-            <img src="resources/slime pfp.png" alt="">
+            <img src="resources/slime pfp.png" alt="personal image" class="pfp">
             <div class="info-box">
                 <h1><span>Hi,I'm Momo</span></h1>
                 <h3><span>Programmer</span> & <span>Artist</span></h3>
@@ -84,7 +85,7 @@
 
         <section id="work">
 
-            <div class="header"><span>My Work</span></div>
+            <div class="header work-header"><span>My Work</span></div>
 
             <div class="projects-container">
                 <div class="work-box">
@@ -112,7 +113,7 @@
         </section>
 
         <section id="art">
-            <h1><span>My Art</span></h1>
+            <h1 class="header art-header"><span>My Art</span></h1>
             <div id="gallery">
 
             </div>
@@ -124,7 +125,7 @@
         </section>
         
         <section id="contact">
-            <div class="header"><span>Contact Me</span></div>
+            <div class="header contact-header"><span>Contact Me</span></div>
 
             <form action="#">
                 <div class="input-box">

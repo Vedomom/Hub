@@ -1,3 +1,44 @@
+/*utility classes*/
+
+.animate-regular{
+    animation-name: slideFadeIn;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+}
+
+.animate-infinite{
+    animation-name: spin;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+}
+
+
+/*animations*/
+@keyframes slideFadeIn{
+    from{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(360);
+    }
+    
+    to{
+        transform: rotate(0);
+    }
+}
+
+
+/*styles*/
+
 :root{
     --BG: #171614;
     --SBG: darkturquoise;
@@ -158,7 +199,7 @@ section{
     color: mintcream;
 }
 
-#about img{
+.pfp{
     width: 18vw;
     border-radius: 50%;
     margin-top: 3em;
