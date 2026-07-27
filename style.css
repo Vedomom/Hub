@@ -206,7 +206,7 @@ section{
     transition: 0.3s ease-in-out;    
 }
 #about h2:hover{
-    transform: translateX(5px) translateY(-5px);
+    transform: scale(1.05);
     text-shadow: var(--MainColor);
 }
 
@@ -229,12 +229,14 @@ section{
     align-items: center;
     gap: 0.5em;
     font-size: 1.3em;
+    opacity: 0.8;
+    cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .skills ul li span:hover{
     opacity: 1;
-    transform: translateX(10px) translateY(-10px);
-    
+    transform: scale(1.05);
+    opacity: 1;
 }
 .skills ul li i{
     font-size: 1.3em;
