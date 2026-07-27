@@ -25,11 +25,12 @@ const popUp = document.querySelector('.PopUpContainer')
 const imageLimit = 39;
 const loadButton = document.querySelector('.load-btn')
 var currentIndex = 0
-const loadLimit = 2
+const loadLimit = 5
+const initialLimit = 2
 var loadIndex = 0
 
 
-for(let i = currentIndex; loadIndex <= loadLimit;loadIndex++ ,currentIndex++ ,i++){
+for(let i = currentIndex; loadIndex <= initialLimit;loadIndex++ ,currentIndex++ ,i++){
     const image = document.createElement('img');
 
     image.src = `./art_gal_img_${i}.png`;
