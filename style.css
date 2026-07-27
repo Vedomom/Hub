@@ -303,6 +303,8 @@ section{
 #art{
     background-color: var(--BG);
     text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 #art h1 {
@@ -355,6 +357,27 @@ section{
 
 #art .PopUpContainer.active{
     display: flex;
+}
+
+#art .load-btn{
+    margin-top: 2em;
+    align-self: center;
+    justify-self: center;
+    padding: 0.5em 1em;
+    color: mintcream;
+    font-weight: 500;
+    letter-spacing: 1px;
+    border-radius: 2em;
+    font-size: 1.2em;
+    cursor: pointer;
+    border: 2px solid var(--teritaryColor);
+    background: var(--BG);
+    transition: 0.3s ease-in-out;
+}
+#art .load-btn:hover{
+    background-color: var(--teritaryColor);
+    color: var(--BG);
+    transform: scale(1.05);
 }
 
 #contact{

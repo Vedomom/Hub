@@ -1,8 +1,7 @@
-import { ThreeMFLoader } from 'three/examples/jsm/Addons.js';
+import { Pass, ThreeMFLoader } from 'three/examples/jsm/Addons.js';
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-
 //Menu button toggle
 
 const menu = document.querySelector("#menu");
@@ -23,26 +22,62 @@ links.onclick = () => {
 const gallery = document.querySelector('#gallery');
 const selectedImage = document.querySelector('#selectedImage');
 const popUp = document.querySelector('.PopUpContainer')
-const imageIndexs = Array(40).keys();
+const imageLimit = 39;
+const loadButton = document.querySelector('.load-btn')
+var currentIndex = 0
+const loadLimit = 2
+var loadIndex = 0
 
-imageIndexs.forEach((i) => {
+
+for(let i = currentIndex; loadIndex <= loadLimit;loadIndex++ ,currentIndex++ ,i++){
     const image = document.createElement('img');
 
     image.src = `./art_gal_img_${i}.png`;
-  
     image.alt = `Art Cover #${i}`;
+    image.loading = 'lazy'
     image.classList.add('galleryImage');
 
     image.addEventListener('click', () =>{
-        //popUp
+    //popUp
         popUp.classList.toggle('active')
         selectedImage.src = image.src
         selectedImage.alt = image.alt
     })
 
     gallery.appendChild(image)
+}
+loadIndex = 0
 
+loadButton.addEventListener('click', () =>{
+    if(currentIndex <= imageLimit){
+        for(let i = currentIndex; loadIndex <= loadLimit;loadIndex++ ,currentIndex++ ,i++){
+            if(currentIndex > imageLimit){
+                break
+            }
+            const image = document.createElement('img');
+
+            image.src = `./art_gal_img_${i}.png`;
+            image.alt = `Art Cover #${i}`;
+            image.loading = 'lazy'
+            image.classList.add('galleryImage');
+
+            image.addEventListener('click', () =>{
+                //popUp
+                popUp.classList.toggle('active')
+                selectedImage.src = image.src
+                selectedImage.alt = image.alt
+            })
+
+            gallery.appendChild(image)
+        }
+
+        loadIndex =0
+    }
+    else{
+        //display message or smth
+    }
 })
+
 
 popUp.onclick = () => {
     popUp.classList.toggle('active')
