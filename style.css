@@ -1,3 +1,8 @@
+/*Imports*/
+
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chela+One&family=Freckle+Face&family=Itim&family=Kalam:wght@300;400;700&display=swap');
+
 /*utility classes*/
 
 .animate-regular{
@@ -54,7 +59,8 @@
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
-    font-family: "Akaya Kanadaka", system-ui;
+    font-family: "Freckle Face" "DynaPuff" "Kalam", system-ui;
+    font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
     scrollbar-width: thin;
@@ -64,6 +70,7 @@
 
 body{
     min-height: 100vh;
+    font-family: "Kalam" , system-ui;
     background-color: var(--BG);
 }
 
@@ -73,6 +80,7 @@ nav{
     width: 100%;
     padding: 1.5em 15%;
     display: flex;
+    font-family: "Freckle Face", system-ui;
     align-items: center;
     justify-content: space-between;
     background-color: rgba(15, 15, 15, 0.8);
@@ -117,6 +125,7 @@ nav ul a:hover{
 .logo{
     font-size: 2em;
     color: mintcream;
+    font-family: "Freckle Face", system-ui;
     font-weight: 800;
     opacity: 0.8;
     transition: 0.4s ease-in-out;
@@ -133,7 +142,8 @@ nav ul a:hover{
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 2em;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    font-family: "Freckle Face", system-ui;
     cursor: pointer;
     border: 2px solid var(--MainColor);
     background: var(--BG);
@@ -212,6 +222,9 @@ section{
     gap: 0.5em;
     max-width: 700px;
 }
+.info-box span{
+    font-family: "Freckle Face", system-ui;
+}
 .info-box h1{
     font-size: 5vw;
     font-weight: 500;
@@ -243,6 +256,7 @@ section{
     margin-top: 3em;
     font-size: 3vw;
     font-weight: 500;
+    font-family: "Freckle Face", system-ui;
     align-self: self-start;
     transition: 0.3s ease-in-out;    
 }
@@ -289,6 +303,7 @@ section{
 
 .header{
     text-align: center;
+    font-family: "Freckle Face", system-ui;
     font-size: 5em;
     margin: 0.5em 0;
 }
@@ -330,6 +345,7 @@ section{
 }
 .work-box h1{
     font-size: 2em;
+    font-family: "Freckle Face", system-ui;
 }
 .work-box img{
     min-width: 25px;
@@ -406,6 +422,7 @@ section{
     justify-self: center;
     padding: 0.5em 1em;
     color: mintcream;
+    font-family: "Freckle Face", system-ui;
     font-weight: 500;
     letter-spacing: 1px;
     border-radius: 2em;
@@ -443,6 +460,7 @@ form span{
     font-size: 1.5em;
 }
 form input{
+    font-family: "Kalam", system-ui;
     font-size: 1.3em;
     padding: 1em 5em;
     border-radius: 0.5em;
