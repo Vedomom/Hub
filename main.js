@@ -94,38 +94,55 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
+//nav buttons
 const nav_abt = document.querySelector('.nav-about');
 const nav_wrk = document.querySelector('.nav-work');
 const nav_art = document.querySelector('.nav-art');
 const nav_tct = document.querySelector('.nav-contact');
 
+//headers
 const abt_header = document.querySelector('.pfp');
 const wrk_header = document.querySelector('.work-header');
 const art_header = document.querySelector('.art-header');
 const tct_header = document.querySelector('.contact-header');
 
+//whole sections
+const about_sect = document.querySelector('#about');
+const work_sect = document.querySelector('#work');
+const art_sect = document.querySelector('#art');
+const contact_sect = document.querySelector('#contact');
+
 nav_abt.addEventListener('click', async() => {
-    abt_header.classList.toggle('animate-regular');
-    await sleep(700);
-    abt_header.classList.toggle('animate-regular');
+    about_sect.classList.toggle('animate-regular');
+    abt_header.classList.toggle('animate-delay');
+    await sleep(1200);
+    about_sect.classList.toggle('animate-regular');
+    abt_header.classList.toggle('animate-delay');
+
 });
 
 nav_wrk.addEventListener('click', async() => {
-    wrk_header.classList.toggle('animate-regular');
-    await sleep(700);
-    wrk_header.classList.toggle('animate-regular');
+    work_sect.classList.toggle('animate-regular');
+    wrk_header.classList.toggle('animate-delay');
+    await sleep(1200);
+    work_sect.classList.toggle('animate-regular');
+    wrk_header.classList.toggle('animate-delay');
 });
 
 nav_art.addEventListener('click', async() => {
-    art_header.classList.toggle('animate-regular');
-    await sleep(700);
-    art_header.classList.toggle('animate-regular');
+    art_sect.classList.toggle('animate-regular');
+    art_header.classList.toggle('animate-delay');
+    await sleep(1200);
+    art_sect.classList.toggle('animate-regular');
+    art_header.classList.toggle('animate-delay');
 });
 
 nav_tct.addEventListener('click', async() => {
-    tct_header.classList.toggle('animate-regular');
-    await sleep(700);
-    tct_header.classList.toggle('animate-regular');
+    contact_sect.classList.toggle('animate-regular');
+    tct_header.classList.toggle('animate-delay');
+    await sleep(1200);
+    contact_sect.classList.toggle('animate-regular');
+    tct_header.classList.toggle('animate-delay');
 });
 
 //Three.js
