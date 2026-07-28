@@ -163,6 +163,8 @@ nav ul a:hover{
     border-radius: 2em;
     font-size: 1.3em;
     cursor: pointer;
+    text-align: center;
+    text-justify: center;
     background: linear-gradient(to right, var(--MainColor), var(--SBG));
     color: var(--BG);
     transition: 0.3s ease-in-out;
