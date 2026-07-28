@@ -2,6 +2,7 @@ import { Pass, ThreeMFLoader } from 'three/examples/jsm/Addons.js';
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import { bool } from 'three/tsl';
 //Menu button toggle
 
 const menu = document.querySelector("#menu");
@@ -112,37 +113,64 @@ const work_sect = document.querySelector('#work');
 const art_sect = document.querySelector('#art');
 const contact_sect = document.querySelector('#contact');
 
+//buffers
+var isClickableAbout = true
+var isClickableWork = true
+var isClickableArt = true
+var isClickableContact = true
+
+
 nav_abt.addEventListener('click', async() => {
-    about_sect.classList.toggle('animate-regular');
-    abt_header.classList.toggle('animate-delay');
-    await sleep(1200);
-    about_sect.classList.toggle('animate-regular');
-    abt_header.classList.toggle('animate-delay');
+    if(isClickableAbout){
+        isClickableAbout = false
+        about_sect.classList.toggle('animate-regular');
+        abt_header.classList.toggle('animate-delay');
+        await sleep(1200);
+        about_sect.classList.toggle('animate-regular');
+        abt_header.classList.toggle('animate-delay');
+        isClickableAbout = true
+    }
+    
 
 });
 
 nav_wrk.addEventListener('click', async() => {
-    work_sect.classList.toggle('animate-regular');
-    wrk_header.classList.toggle('animate-delay');
-    await sleep(1200);
-    work_sect.classList.toggle('animate-regular');
-    wrk_header.classList.toggle('animate-delay');
+    if(isClickableWork){
+        isClickableWork = false
+        work_sect.classList.toggle('animate-regular');
+        wrk_header.classList.toggle('animate-delay');
+        await sleep(1200);
+        work_sect.classList.toggle('animate-regular');
+        wrk_header.classList.toggle('animate-delay');
+        isClickableWork = true
+    }
+
 });
 
 nav_art.addEventListener('click', async() => {
-    art_sect.classList.toggle('animate-regular');
-    art_header.classList.toggle('animate-delay');
-    await sleep(1200);
-    art_sect.classList.toggle('animate-regular');
-    art_header.classList.toggle('animate-delay');
+    if(isClickableArt){
+        isClickableArt = false
+        art_sect.classList.toggle('animate-regular');
+        art_header.classList.toggle('animate-delay');
+        await sleep(1200);
+        art_sect.classList.toggle('animate-regular');
+        art_header.classList.toggle('animate-delay');
+        isClickableArt = true
+    }
+    
 });
 
 nav_tct.addEventListener('click', async() => {
-    contact_sect.classList.toggle('animate-regular');
-    tct_header.classList.toggle('animate-delay');
-    await sleep(1200);
-    contact_sect.classList.toggle('animate-regular');
-    tct_header.classList.toggle('animate-delay');
+    if(isClickableContact){
+        isClickableContact = false
+        contact_sect.classList.toggle('animate-regular');
+        tct_header.classList.toggle('animate-delay');
+        await sleep(1200);
+        contact_sect.classList.toggle('animate-regular');
+        tct_header.classList.toggle('animate-delay');
+        isClickableContact = true
+    }
+    
 });
 
 //Three.js
