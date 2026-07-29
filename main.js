@@ -38,6 +38,7 @@ for(let i = currentIndex; loadIndex <= initialLimit;loadIndex++ ,currentIndex++ 
     image.alt = `Art Cover #${i}`;
     image.loading = 'lazy'
     image.classList.add('galleryImage');
+    image.classList.toggle('animate-pop');
 
     image.addEventListener('click', () =>{
     //popUp
@@ -62,6 +63,7 @@ loadButton.addEventListener('click', () =>{
             image.alt = `Art Cover #${i}`;
             image.loading = 'lazy'
             image.classList.add('galleryImage');
+            image.classList.toggle('animate-pop');
 
             image.addEventListener('click', () =>{
                 //popUp
