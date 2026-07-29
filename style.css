@@ -25,7 +25,7 @@
 .animate-pop{
     animation-name: popIn;
     animation-duration: 0.3s;
-    animation-delay: 0.1s;
+    animation-delay: 0.4s;
     animation-fill-mode: backwards;
 }
 
@@ -341,7 +341,6 @@ section{
 
 .projects-container{
     display: grid;
-    background-color: var(--BG);
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2em;
 }
@@ -349,6 +348,8 @@ section{
 .work-box{
     border: 3px solid var(--SBG);
     border-radius: 0.5em;
+    background-color: rgb(18, 15, 23);
+    background-image: var(--IMAGEwiggles);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -364,7 +365,7 @@ section{
 .work-box:hover{
     border-color: var(--MainColor);
     padding: 3.5em;
-    background: var(--SBG);
+    background-color: var(--SBG);
     color: var(--BG);
 }
 .work-box:hover span{
@@ -574,9 +575,9 @@ footer p{
         padding: 8em 15%;
     }
 
-        nav .btn{
-            display: none;
-        }
+    nav .btn{
+        display: none;
+    }
 
     #menu{
             display: block;
@@ -598,7 +599,7 @@ footer p{
     .links a{
             margin: 2em;
             display: block;
-            font-size: 1.5em;
+            font-size: 1.1em;
             color: mintcream;
         }
     .links.active{
@@ -623,6 +624,11 @@ footer p{
     #about .skill-box{
             flex-direction: column;
     }
+
+    #about .skill-box .skills span {
+        opacity: 1;
+    }
+
     #about .skill-box img{
             width: 32vw;
     }
@@ -636,6 +642,8 @@ footer p{
     #gallery{
         grid-template-columns: repeat(auto-fit, minmax(12em, 1fr));
     }
+
+
 
 }
 
@@ -675,5 +683,9 @@ footer p{
         flex-direction: column;
         gap: 5em;
         align-items: baseline;
+    }
+
+    #gallery{
+        grid-template-columns: repeat(auto-fit, minmax(8em, 1fr));
     }
 }
