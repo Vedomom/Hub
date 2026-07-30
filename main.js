@@ -2,7 +2,7 @@ import { Pass, ThreeMFLoader } from 'three/examples/jsm/Addons.js';
 import './style.css'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
-import { bool } from 'three/tsl';
+import emailjs from '@emailjs/browser';
 //Menu button toggle
 
 const menu = document.querySelector("#menu");
@@ -88,6 +88,28 @@ popUp.onclick = () => {
     selectedImage.src = ''
     selectedImage.alt = ''
 }
+
+
+//Contact Form
+emailjs.init({
+                publicKey: "nvH01GUFbHOCM9RpN",
+            });
+
+const form  = document.querySelector(".contact-form");
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    emailjs.sendForm('service_2x833qv', 'template_g2f4yqb', form).then(
+        (response) => {
+            console.log("SUCCESS ", response.status, response.text);
+        }, 
+        (error) => {
+            console.log("Failure...", error);
+        }
+    );
+    form.reset();
+})
+
 
 
 

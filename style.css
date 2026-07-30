@@ -489,7 +489,7 @@ form .input-box{
 form span{
     font-size: 1.5em;
 }
-form input{
+form .input-field{
     font-family: "Kalam", system-ui;
     font-size: 1.3em;
     padding: 1em 5em;
@@ -497,8 +497,11 @@ form input{
     border: none;
     outline: none;
 }
-form input:focus{
+form .input-field:focus{
     background-color: antiquewhite;
+}
+form .message-box{
+   padding: 1em 5em;
 }
 
 #contact .btn{
