@@ -581,6 +581,9 @@ footer p{
     nav .btn{
         display: none;
     }
+    nav {
+        gap: 2em;
+    }
 
     #menu{
             display: block;
@@ -598,16 +601,16 @@ footer p{
             text-align: center;
             background-color: #0d0d0cdd;
             display: none;
+            gap: 0em;
         }
     .links a{
-            margin: 2em;
+            margin: 1em;
             display: block;
-            font-size: 1.1em;
+            font-size: 1.2em;
             color: mintcream;
         }
     .links.active{
-            display: flex;
-            gap: 0em;
+            display: flex;  
     }
 
     nav ul a::before{
@@ -661,11 +664,14 @@ footer p{
             width: 32vw;
     }
     #about h2{
-            font-size: 1.5em;
+            font-size: 2em;
     }
 
     #about .skill-box{
         gap: 3em;
+    }
+    #about .skill-box img{
+            width: 50vw;
     }
     #work .header{
         font-size: 3em;
@@ -675,6 +681,10 @@ footer p{
     }
     #contact .input-box span{
         font-size: 1.2em;
+    }
+    
+    #contact .message-box{
+        padding: 1em 1em;
     }
     
     .input-box input{
