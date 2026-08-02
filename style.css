@@ -29,6 +29,12 @@
     animation-fill-mode: backwards;
 }
 
+.animate-pop-nodelay{
+    animation-name: popIn;
+    animation-duration: 0.3s;
+    animation-fill-mode: backwards;
+}
+
 .animate-infinite{
     animation-name: spin;
     animation-duration: 0.5s;
@@ -198,7 +204,7 @@ nav ul a:hover{
     cursor: pointer;
     text-align: center;
     text-justify: center;
-    background: linear-gradient(to right, var(--MainColor), var(--SBG));
+    background: linear-gradient(to right, var(--MainColor), var(--teritaryColor));
     color: var(--BG);
     transition: 0.3s ease-in-out;
 }
@@ -208,7 +214,7 @@ nav ul a:hover{
 }
 
 span{
-    background: linear-gradient(to right, var(--MainColor), var(--SBG));
+    background: linear-gradient(to right, var(--MainColor), var(--teritaryColor));
     background-clip: text;
     color: transparent;
 }
@@ -506,6 +512,62 @@ form .message-box{
 
 #contact .btn{
     font-size: 1.5em;
+}
+
+#contact .response{
+    background-color: rgba(13, 13, 12, 0.7);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+#contact .response.active{
+    display: flex;
+}
+
+#contact .response .response-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);  
+    padding: 2em 3em;
+    border-radius: 1em;
+    background-color: rgb(19, 17, 23);
+    background-image: var(--IMAGEoverlapCircles);
+    color: mintcream;
+
+}
+
+
+#contact .response-box h1 {
+    font-size: 5em;
+}
+
+#contact .response-box h3{
+    font-size: 2em;
+    opacity: 0.7;
+}
+
+#contact .response-box i{
+    font-size: 10em;
+    opacity: 1;
+}
+
+#contact .response-box p{
+    font-size: 1em;
+    color: crimson;
+}
+
+#fail-response span{
+    background: linear-gradient(to right, crimson, darkred);
+    background-clip: text;
 }
 
 footer{

@@ -96,15 +96,31 @@ emailjs.init({
             });
 
 const form  = document.querySelector(".contact-form");
+const responseFail = document.querySelector('#fail-response');
+const responseSuccess = document.querySelector('#success-response');
+const fail_box = document.querySelector('#fail-response .response-box');
+const success_box = document.querySelector('#success-response .response-box');
+
+responseSuccess.addEventListener('click', () => {
+    responseSuccess.classList.toggle('active');
+})
+
+responseFail.addEventListener('click', () => {
+    responseFail.classList.toggle('active');
+})
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     emailjs.sendForm('service_2x833qv', 'template_g2f4yqb', form).then(
         (response) => {
             console.log("SUCCESS ", response.status, response.text);
+            responseSuccess.classList.toggle('active');
+            success_box.classList.toggle('animate-pop-nodelay');
         }, 
         (error) => {
             console.log("Failure...", error);
+            responseFail.classList.toggle('active');
+            fail_box.classList.toggle('animate-pop-nodelay');
         }
     );
     form.reset();
