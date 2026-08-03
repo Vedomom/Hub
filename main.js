@@ -99,6 +99,7 @@ const form  = document.querySelector(".contact-form");
 const responseFail = document.querySelector('#fail-response');
 const responseSuccess = document.querySelector('#success-response');
 const fail_box = document.querySelector('#fail-response .response-box');
+const fail_para = document.querySelector('#fail-response .response-box p');
 const success_box = document.querySelector('#success-response .response-box');
 
 responseSuccess.addEventListener('click', () => {
@@ -121,6 +122,8 @@ form.addEventListener('submit', (e) => {
             console.log("Failure...", error);
             responseFail.classList.toggle('active');
             fail_box.classList.toggle('animate-pop-nodelay');
+            fail_para.textContent = "the failure was due to the following \n " + error
+            
         }
     );
     form.reset();
